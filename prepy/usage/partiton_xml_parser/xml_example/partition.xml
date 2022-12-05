@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<configuration>
+    <physical_partition>
+		<partition label="abc" size_in_kb="2048" type="0E81686A68CB" bootable="false" readonly="true" filename=""/>
+		<partition label="def" size_in_kb="128" type="0E81686A68CB" bootable="false" readonly="false" filename=""/>
+    </physical_partition>
+</configuration>

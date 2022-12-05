@@ -1,0 +1,35 @@
+# Let us customize ~/.bashrc
+export USERPATH="/home/$USER/"
+export LOGPATH="${USERPATH}/logs"
+export PYTHONPATH="${PYTHONPATH}:${USERPATH}btools/prepy"
+
+alias uimg='source ${USERPATH}btools/unpackimg/uimg.sh'
+alias ws='cd ${USERPATH}apss'
+alias try='cd ${USERPATH}test'
+alias bkp='time ./build/build.sh 2>&1 |& tee fbc_compilation.txt'
+alias cmd='cat ~/.bash_custom'
+alias cmdadd='vi ~/.bash_custom'
+alias cmdsource='source ~/.bashrc'
+alias cddef='cd arch/arm64/configs/vendor/'
+alias cddts='cd arch/arm64/boot/dts/vendor'
+alias flash='cd ${USERPATH}btools/binary/flash_image/'
+alias tool='cd ${USERPATH}btools'
+alias toolupdate='bash ${USERPATH}btools/toolmanage/toolupdate/toolupdate.sh'
+alias pyswitch='source ${USERPATH}btools/VirtualEnvLocation/pyswitch.sh'
+alias pyexit='deactivate'
+alias path='python ${USERPATH}btools/path/path_change.py $1'
+alias precode='bash ${USERPATH}btools/precode/precode.sh $@'
+alias precodeadd='vi ${USERPATH}btools/precode/precode.sh'
+alias precodecd='cd ${USERPATH}apss'
+alias prelog='bash ${USERPATH}btools/prelog/prelog.sh $@'
+alias prelogadd='vi ${USERPATH}btools/prelog/prelog.sh'
+alias logcd='cd ${USERPATH}logs'
+alias predev='source ${USERPATH}btools/predev/predev.sh $@'
+alias predevadd='vi ${USERPATH}btools/predev/predev.sh'
+alias devcd='cd ${USERPATH}devs'
+alias tmuxn='bash ${USERPATH}btools/tmux/tmux.sh -n $@'
+alias tmuxl='bash ${USERPATH}btools/tmux/tmux.sh -l $@'
+alias tmuxa='bash ${USERPATH}btools/tmux/tmux.sh -a $@'
+alias tmuxk='bash ${USERPATH}btools/tmux/tmux.sh -k $@'
+alias dts='bash ${USERPATH}btools/dts/dts.sh $@'
+
