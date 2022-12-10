@@ -17,7 +17,7 @@ if [ $# -gt 1 ];then
     usage
     exit
 elif [ $# -eq 1 ];then
-    userpath="$1"
+    userpath="$1/"
     if [ "${userpath:0:1}" != "/" ];then
         echo "Failed: must use absolute path, eg: /home/bozhang/"
         exit
