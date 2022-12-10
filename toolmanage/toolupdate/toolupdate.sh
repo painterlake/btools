@@ -1,4 +1,4 @@
-cd ${USERPATH}tools
+cd ${USERPATH}btools
 VERSION="Version information: "
 OTHER=$1
 cp ~/.bash_custom ${USERPATH}btools/toolmanage/bash_config -f

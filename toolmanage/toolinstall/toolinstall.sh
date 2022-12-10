@@ -18,7 +18,7 @@ if [ $# -gt 1 ];then
     exit
 elif [ $# -eq 1 ];then
     userpath="$1"
-    if [ "${userpath:0-1}" != "/" ];then
+    if [ "${userpath:0:1}" != "/" ];then
         echo "Failed: must use absolute path, eg: /home/bozhang/"
         exit
     fi
@@ -36,7 +36,7 @@ clone_Repository(){
         echo "downloading btools ..."
         mkdir -p ${userpath}
         cd ${userpath}
-        git clone https://github.com/painterlake/btools
+        git clone https://gitee.com/feimuyu/btools
     fi
 }
 
@@ -54,7 +54,7 @@ delete_code(){
 
 copy_bash_config(){
     # copy bash config
-    cp ${userpath}tools/toolmanage/bash_config/.bash_custom ${HOME}/ -f
+    cp ${userpath}btools/toolmanage/bash_config/.bash_custom ${HOME}/ -f
     echo ". ${HOME}/.bash_custom" >> ${HOME}/.bashrc
     . ${HOME}/.bashrc
     sed '1c export USERPATH=${userpath}' ${HOME}/.bash_custom
@@ -67,7 +67,7 @@ config_custom_directory(){
     mkdir -p ${userpath}logs
     mkdir -p ${userpath}devs
     mkdir -p ${userpath}home
-    mkdir -p ${userpath}tools/binary/flash_imag
+    mkdir -p ${userpath}btools/binary/flash_imag
 }
 
 keep_binary_fresh(){
