@@ -36,7 +36,7 @@ clone_Repository(){
         echo "downloading btools ..."
         mkdir -p ${userpath}
         cd ${userpath}
-        git clone https://gitee.com/feimuyu/btools
+        git clone https://github.com/painterlake/btools
     fi
 }
 
