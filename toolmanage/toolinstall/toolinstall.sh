@@ -68,6 +68,7 @@ config_custom_directory(){
     mkdir -p ${userpath}devs
     mkdir -p ${userpath}home
     mkdir -p ${userpath}btools/binary/flash_imag
+    mkdir -p ${userpath}btools/binary/multipass
 }
 
 keep_binary_fresh(){

@@ -1,0 +1,18 @@
+multipass安装guide:
+    i.  https://multipass.run/docs/linux-tutorial#heading--install-multipass
+    ii. 注意事项
+        1) multipass 是使用snap安装的没有话，需要先安装snap
+            a. sudo apt install snapd
+        2) 运行multipass程序必须使用sudo，eg： sudo multipass list
+            a. 否则会报错：Sorry, home directories outside of /home are not currently supported.
+        3) 要把虚拟机ubuntu原始的源替换成阿里源
+            a. ubuntu18.04
+                i. https://zhuanlan.zhihu.com/p/460499534
+            b. ubuntu20.04
+                i. https://blog.csdn.net/weixin_44260459/article/details/122875519
+            c. ubuntu22.04
+                i. https://www.cnblogs.com/liujiaxin2018/p/16373668.html
+    iii. gv上的安装命令：
+        1) sudo multipass launch bionic --name ubuntu18 --mem 16G --disk 600G --cpus 8
+        2) sudo multipass launch focal --name ubuntu20 --mem 16G --disk 600G --cpus 8
+        3) sudo multipass launch jammy --name ubuntu22 --mem 16G --disk 600G --cpus 8
